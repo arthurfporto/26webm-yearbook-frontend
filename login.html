@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entrar — Yearbook Digital</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Yearbook Digital</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="cadastro.html">Cadastrar</a></li>
+          <li><a href="mural.html">Mural</a></li>
+          <li><a href="perfil.html">Meu perfil</a></li>
+          <li><a href="login.html" id="link-entrar" class="btn">Entrar</a></li>
+          <li><button id="btn-sair" class="btn" hidden>Sair</button></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Entrar</h2>
+        <p>Faça login para acessar seu perfil e o mural.</p>
+        <p id="erro" class="erro"></p>
+        <form>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+          </div>
+          <div>
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" placeholder="sua senha" required />
+          </div>
+          <button type="submit" class="btn">Entrar</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Yearbook Digital · IFNMG Campus Salinas</p>
+    </footer>
+
+    <script type="module" src="js/header.js"></script>
+    <script type="module" src="js/login.js"></script>
+  </body>
+</html>

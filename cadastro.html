@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Criar conta — Yearbook Digital</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script>
+      UPLOADCARE_PUBLIC_KEY = '0a2348c5eed7dce54a0a';
+    </script>
+    <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Yearbook Digital</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="cadastro.html">Cadastrar</a></li>
+          <li><a href="mural.html">Mural</a></li>
+          <li><a href="perfil.html">Meu perfil</a></li>
+          <li><a href="login.html" id="link-entrar" class="btn">Entrar</a></li>
+          <li><button id="btn-sair" class="btn" hidden>Sair</button></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Criar conta</h2>
+        <p><strong>Atenção:</strong> preencha ao menos nome, email e senha.</p>
+        <p id="erro" class="erro"></p>
+        <form>
+          <div>
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div>
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" required />
+          </div>
+          <div>
+            <label for="cidade">Cidade</label>
+            <input type="text" id="cidade" name="cidade" />
+          </div>
+          <div>
+            <label for="frase">Frase</label>
+            <input type="text" id="frase" name="frase" />
+          </div>
+          <div>
+            <label for="planosFuturos">Planos futuros</label>
+            <input type="text" id="planosFuturos" name="planosFuturos" />
+          </div>
+          <div>
+            <label>Foto de perfil (opcional)</label>
+            <input type="hidden" role="uploadcare-uploader" name="foto" />
+          </div>
+          <button type="submit" class="btn">Criar conta</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Yearbook Digital · IFNMG Campus Salinas</p>
+    </footer>
+
+    <script type="module" src="js/header.js"></script>
+    <script type="module" src="js/cadastro.js"></script>
+  </body>
+</html>

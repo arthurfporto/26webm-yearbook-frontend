@@ -1,0 +1,276 @@
+/* ===== Variáveis ===== */
+:root {
+  --cor-primaria: #1e3a8a;
+  --cor-secundaria: #2563eb;
+  --cor-texto: #1f2937;
+  --cor-fundo: #f9fafb;
+  --fonte: 'Poppins', sans-serif;
+}
+
+/* ===== Reset e base ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fonte);
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+  line-height: 1.6;
+}
+
+h1,
+h2 {
+  color: var(--cor-primaria);
+  font-weight: 700;
+}
+
+a {
+  color: var(--cor-secundaria);
+}
+
+/* ===== Header e navegação ===== */
+header {
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+  padding: 24px;
+  text-align: center;
+}
+
+header h1 {
+  color: #ffffff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+nav a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+main {
+  padding: 24px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 24px;
+}
+
+footer {
+  padding: 16px;
+  text-align: center;
+  margin-top: 32px;
+}
+
+/* ===== Botões e formulários ===== */
+.btn {
+  background-color: var(--cor-secundaria);
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: var(--cor-primaria);
+}
+
+#btn-sair {
+  background-color: #dc2626;
+  font-family: inherit;
+}
+
+#btn-sair:hover {
+  background-color: #b91c1c;
+}
+
+#link-entrar {
+  display: inline-block;
+  background-color: #16a34a;
+  font-family: inherit;
+  text-decoration: none;
+}
+
+#link-entrar:hover {
+  background-color: #15803d;
+  opacity: 1;
+  text-decoration: none;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--cor-secundaria);
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.erro {
+  color: #dc2626;
+  margin-bottom: 8px;
+}
+
+.input-erro {
+  border-color: #dc2626;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.foto-turma {
+  display: block;
+  width: 100%;
+}
+
+/* ===== Cards ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  animation: aparecer 0.4s ease-out;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.cards-mural {
+  grid-template-columns: 1fr;
+}
+
+.perfil-foto {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+#lista-alunos .perfil-foto {
+  display: block;
+  margin-inline: auto;
+}
+
+#lista-alunos .card h3 {
+  text-align: center;
+}
+
+/* ===== Mensagens do mural ===== */
+.mensagem {
+  border-left: 4px solid var(--cor-secundaria);
+}
+
+.mensagem-autor {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.mensagem-imagem {
+  display: block;
+  margin-inline: auto;
+}
+
+/* ===== Perfil individual ===== */
+.perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.perfil blockquote {
+  font-style: italic;
+  color: var(--cor-primaria);
+}
+
+/* ===== Toasts ===== */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  border-radius: 6px;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  animation: aparecer 0.3s ease-out;
+}
+
+.toast-sucesso {
+  background-color: #16a34a;
+}
+
+.toast-erro {
+  background-color: #dc2626;
+}
+
+/* ===== Animação ===== */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+  main {
+    padding: 16px;
+  }
+  .perfil-foto {
+    width: 96px;
+    height: 96px;
+  }
+}

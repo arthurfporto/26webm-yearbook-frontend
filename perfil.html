@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil — Yearbook Digital</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Yearbook Digital</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="cadastro.html">Cadastrar</a></li>
+          <li><a href="mural.html">Mural</a></li>
+          <li><a href="perfil.html">Meu perfil</a></li>
+          <li><a href="login.html" id="link-entrar" class="btn">Entrar</a></li>
+          <li><button id="btn-sair" class="btn" hidden>Sair</button></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="perfil">Carregando...</section>
+
+      <section id="area-edicao" class="card" hidden>
+        <h2>Editar perfil</h2>
+        <p id="feedback"></p>
+        <form id="form-edicao">
+          <div>
+            <label for="edit-cidade">Cidade</label>
+            <input type="text" id="edit-cidade" name="cidade" />
+          </div>
+          <div>
+            <label for="edit-frase">Frase</label>
+            <input type="text" id="edit-frase" name="frase" />
+          </div>
+          <div>
+            <label for="edit-planos">Planos futuros</label>
+            <input type="text" id="edit-planos" name="planosFuturos" />
+          </div>
+          <button type="submit" class="btn">Salvar</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Yearbook Digital · IFNMG Campus Salinas</p>
+    </footer>
+
+    <script type="module" src="js/header.js"></script>
+    <script type="module" src="js/perfil.js"></script>
+  </body>
+</html>
